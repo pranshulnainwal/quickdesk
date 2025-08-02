@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuickDesk - Help Desk Solution</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>🎫 QuickDesk</h1>
+      <div class="user-info" id="userInfo" style="display: none;">
+        Welcome, <span id="currentUserName"></span> (<span id="currentUserRole"></span>)
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Login/Register -->
+    <section id="auth">
+      <h2>🚀 Welcome to QuickDesk</h2>
+      <div class="auth-form">
+        <div class="role-selection">
+          <label for="roleSelect">Select Your Role:</label>
+          <select id="roleSelect" aria-label="Select user role">
+            <option value="enduser">👤 End User</option>
+            <option value="agent">🛠️ Support Agent</option>
+            <option value="admin">👑 Administrator</option>
+          </select>
+        </div>
+        <input type="text" id="usernameInput" placeholder="Enter your username" autocomplete="off" />
+        <button id="loginBtn">Login / Register</button>
+      </div>
+    </section>
+
+    <!--  Dashboard -->
+    <section id="dashboard" class="hidden">
+      <div class="dashboard">
+        <!--  Sidebar -->
+        <aside class="sidebar" id="sidebar"></aside>
+
+        <!--  Main content area -->
+        <section class="content" id="mainContent"></section>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
